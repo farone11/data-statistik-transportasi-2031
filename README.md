@@ -5,7 +5,7 @@
 ## Fitur
 
 - **5 Halaman Lengkap**: Beranda, Data Statistik, Grafik & Analisis, Visi & Misi, Kesimpulan
-- **Data 10 Tahun**: Statistik historis 2021-2031
+- **Data 10 Tahun**: Statistik historis 2021-2025
 - **Perhitungan**: Kuartal, Semester, dan Tahunan
 - **Multi Bahasa**: Bahasa Indonesia, English, 日本語, 中文
 - **Grafik Interaktif**: Line chart, Bar chart, Area chart, Pie chart
