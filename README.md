@@ -1,6 +1,6 @@
 # Data Statistik Transportasi Indonesia 2031
 
-Website resmi data statistik transportasi nasional Indonesia tahun 2031. Dibuat oleh Kementerian Perhubungan Republik Indonesia.
+ Data statistik transportasi nasional Indonesia tahun 2031.
 
 ## Fitur
 
