@@ -9,25 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-          
+
       - run: npm ci
       - run: npm run build
-      
+
       - name: Push to HF Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          git config --global user.email "github-action[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git clone https://farone11:$HF_TOKEN@huggingface.co/spaces/farone11/data-statistik-transportasi hf
-          rm -rf hf/*
-          cp -r dist/* hf/
           cd hf
-          git config user.email "github-action[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
+          git rm -rf. || true
+          cp -r../dist/*.
           git add.
-          git commit -m "Deploy from ${{ github.sha }}" || echo "No changes"
-          git push
+          git commit -m "Deploy from ${{ github.sha }}" || exit 0
+          git push -u origin main
